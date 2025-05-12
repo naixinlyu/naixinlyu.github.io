@@ -1,0 +1,146 @@
+# baseURL = 'https://example.org/'
+# languageCode = 'en-us'
+# title = 'My New Hugo Site'
+baseURL: "https://naixinlyu.github.io/" 
+title: Naixin Lyu 
+copyright: "[©2025 Naixin Lyu](https://naixinlyu.github.io/)" 
+theme: PaperMod 
+languageCode: en 
+
+enableInlineShortcodes: true 
+hasCJKLanguage: true 
+enableRobotsTXT: true 
+buildDrafts: false 
+buildFuture: false 
+buildExpired: false 
+enableEmoji: true 
+pygmentsUseClasses: true
+defaultContentLanguage: en 
+defaultContentLanguageInSubdir: false 
+
+languages:
+  en:
+    languageName: "English" 
+    weight: 1
+    taxonomies: 
+      category: categories
+      tag: tags
+    # https://gohugo.io/content-management/menus/#define-in-site-configuration
+    menus:
+      main:
+        - name: Posts
+          pageRef: /
+          weight: 4 
+        - name: Archive
+          pageRef: archives/
+          weight: 5
+        - name: Tags
+          pageRef: tags/
+          weight: 10
+        - name: Search
+          pageRef: search/
+          weight: 20
+        - name: About
+          pageRef: about/
+          weight: 21
+
+pagination:
+  pagerSize: 8
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+  author: Nancy Lyu
+  defaultTheme: dark 
+  ShowShareButtons: false 
+  ShowReadingTime: true 
+  displayFullLangName: true 
+  ShowPostNavLinks: true 
+  ShowBreadCrumbs: false 
+  ShowCodeCopyButtons: true 
+  ShowRssButtonInSectionTermList: true 
+  ShowAllPagesInArchive: true 
+  ShowPageNums: true 
+  ShowToc: true 
+  comments: true 
+  images: ["https://i.postimg.cc/7hwBy7VS/calcr.png"] 
+  DateFormat: "2006-01-02" 
+
+
+  homeInfoParams:
+    Title: "Hi👋 Here is Naixin(Nancy) Lyu!"
+    Content: >        
+      Welcome to my personal website! This space mainly documents my learning notes, project progress and daily records.
+      You can also access my written materials elsewhere as follows.  
+        <br> 
+        <br>                                 
+        ● [Nancy's GitHub](https://github.com/naixinlyu)  
+
+  socialIcons:
+    - name: github
+      title: Follow my Github
+      url: "https://github.com/naixinlyu"
+    - name: LinkedIn
+      title: Follow my LinkedIn
+      url: "https://www.linkedin.com/in/naixin-lyu-cmu/"
+
+
+  fuseOpts:
+      isCaseSensitive: false 
+      shouldSort: true 
+      location: 0
+      distance: 1000
+      threshold: 0.4
+      minMatchCharLength: 0
+      # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+      keys: ["title", "permalink", "summary", "content"]
+      includeMatches: true
+  # favicon
+  assets:
+      favicon: "favicon.png"
+      favicon16x16: "favicon.png"
+      favicon32x32: "favicon.png"
+      apple_touch_icon: "favicon.png"
+      safari_pinned_tab: "favicon.png"
+      disableHLJS: true
+
+
+  giscus:
+    repo: "naixinlyu/naixinlyu.github.io"
+    repoId: "R_kgDOMnoSoA"
+    category: "Announcements"
+    categoryId: "DIC_kwDOMnoSoM4CiP7L"
+    mapping: "pathname"
+    strict: "0"
+    reactionsEnabled: "1"
+    emitMetadata: "0"
+    inputPosition: "bottom"
+    lightTheme: "light"
+    darkTheme: "dark"
+    lang: "en"
+    crossorigin: "anonymous"
+
+# https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
+outputs:
+  home:
+    - HTML 
+    - RSS 
+    - JSON # necessary for search
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true 
+  highlight:
+    anchorLineNos: false 
+    codeFences: true 
+    noClasses: false 
+    lineNos: true 
+    lineNumbersInTable: false #
+    # style: "github-dark"
+    # style: monokai         
+
+markup:
+  highlight:
+    # lineNumbers: true
+     lineNumbers: false
