@@ -107,9 +107,9 @@ params:
 
   giscus:
     repo: "naixinlyu/naixinlyu.github.io"
-    repoId: "R_kgDOMnoSoA"
+    repoId: "R_kgDOOojQNQ"
     category: "Announcements"
-    categoryId: "DIC_kwDOMnoSoM4CiP7L"
+    categoryId: "DIC_kwDOOojQNc4CqDMI"
     mapping: "pathname"
     strict: "0"
     reactionsEnabled: "1"
@@ -136,7 +136,7 @@ markup:
     codeFences: true 
     noClasses: false 
     lineNos: true 
-    lineNumbersInTable: false #
+    lineNumbersInTable: false 
     # style: "github-dark"
     # style: monokai         
 

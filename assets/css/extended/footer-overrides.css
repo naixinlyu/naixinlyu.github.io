@@ -1,0 +1,5 @@
+@media (width < 600px) {
+    #top-link {
+      display: none;
+    }
+  }
