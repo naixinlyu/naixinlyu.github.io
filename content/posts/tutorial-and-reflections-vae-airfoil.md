@@ -2,11 +2,9 @@
 +++
 date = '2025-05-12T07:50:00-04:00'
 draft = false
-title = '[DRAFT] Tutorial & Reflections: Building a Variational Autoencoder (VAE) for Airfoil Generation'
+title = 'Tutorial & Reflections: Building a Variational Autoencoder (VAE) for Airfoil Generation'
 tags = ["VAE", "PyTorch", "Deep Learning", "Generative Models", "Tutorial", "Learning Reflections"]
 +++
-
-> _This article is a preliminary draft and subject to future revisions._
 
 ## Introduction
 
@@ -209,6 +207,10 @@ This VAE implementation project highlighted several key concepts:
 2.  **Reparameterization Trick:** Understanding how sampling from the encoder's output distribution ($N(\mu, \sigma^2)$) can be done differentiably ($z = \mu + \sigma \times \epsilon$, where $\epsilon \sim N(0,1)$) is fundamental. This allows gradients to flow back through the sampling process during training.
 
 3.  **Qualitative Evaluation:** Assessing generative models often requires looking at the generated samples. Metrics like loss curves are important, but visual inspection helps determine if the model produces diverse, realistic, and high-quality outputs (e.g., smooth vs. noisy airfoils, varied shapes vs. mode collapse). The example plots show the learning curves and generated airfoil samples.
+
+    Below are examples of generated airfoil samples, demonstrating the kind of output a well-tuned VAE can produce for this task:
+
+    ![Generated Airfoil Samples](Airfoil.PNG)
 
 4.  **Probabilistic Encoding:** Grasping the shift from a deterministic encoder output (in standard AE) to a probabilistic one (in VAE) is key. The encoder learns a distribution for each input, captured by $\mu$ and $\sigma^2$ (or `logvar`).
 
